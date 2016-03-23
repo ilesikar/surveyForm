@@ -1,20 +1,17 @@
 $(function(){
   $("#blanks form").submit(function(event) {
-    var userInput = $("#user").val();
-    var emailInput = $("#email").val();
-    var firstnameInput = $("#firstname").val();
-    var lastnameInput = $("#lastname").val();
-    var passwordInput = $("#password").val();
+    var nameInput = $("#name").val();
+    var dateInput = $("#date").val();
+    var startTimeInput = $("#startTime").val();
+    var endTimeInput = $("#endTime").val();
 
+    $(".name").text(nameInput);
+    $(".date").text(dateInput);
+    $(".startTime").text(startTimeInput);
+    $(".endTime").text(endTimeInput);
 
-    $(".user").text(userInput);
-    $(".email").text(emailInput);
-    $(".firstname").text(firstnameInput);
-    $(".lastname").text(lastnameInput);
-    $(".password").text(passwordInput);
+    $("#appointmentInfo").show();
 
-    $("#accountInfo").show();
-
-    // event.preventDefault();
+    event.preventDefault();
   })
 });
